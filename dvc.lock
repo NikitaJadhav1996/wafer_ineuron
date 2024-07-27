@@ -21,3 +21,28 @@ stages:
       hash: md5
       md5: c2090817d6f0cb6b77e63429d1733941
       size: 100484
+  train_test:
+    cmd:
+    - python data/train_test.py
+    deps:
+    - path: data/get_data.py
+      hash: md5
+      md5: 25757dff8e87d9d33adee7fcf0c3afb0
+      size: 736
+    - path: data/raw/winequality.csv
+      hash: md5
+      md5: c2090817d6f0cb6b77e63429d1733941
+      size: 100484
+    - path: data/train_test.py
+      hash: md5
+      md5: bdf408d0a63c3da3e3db79ae70af90d3
+      size: 1050
+    outs:
+    - path: data/processed/test_winequality.csv
+      hash: md5
+      md5: 6b9836d85de9f9b372d1db0cb2b9eb96
+      size: 21447
+    - path: data/processed/train_winequality.csv
+      hash: md5
+      md5: fdb9602a23ed6dff7eb3f4c531792dec
+      size: 85775
