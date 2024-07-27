@@ -1,0 +1,23 @@
+schema: '2.0'
+stages:
+  preprocess_data:
+    cmd:
+    - python data/preprocess_save.py --config=params.yaml
+    deps:
+    - path: data/get_data.py
+      hash: md5
+      md5: 25757dff8e87d9d33adee7fcf0c3afb0
+      size: 736
+    - path: data/preprocess_save.py
+      hash: md5
+      md5: 62d5d941716fedbdd82ac54e1e3b29bf
+      size: 613
+    - path: data_given/winequality.csv
+      hash: md5
+      md5: ccc8d3507eb151f53f760d36abdef888
+      size: 91998
+    outs:
+    - path: data/raw/winequality.csv
+      hash: md5
+      md5: c2090817d6f0cb6b77e63429d1733941
+      size: 100484
