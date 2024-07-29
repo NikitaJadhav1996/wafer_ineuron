@@ -1,4 +1,10 @@
+# installs all the local packages
+.e .
+
+# third party packages
 dvc
 dvc[gdrive]
 scikit-learn
 pandas
+pytest
+tox

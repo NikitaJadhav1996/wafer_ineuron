@@ -2,7 +2,7 @@ import os
 import pandas as pd
 from sklearn.model_selection import train_test_split
 import argparse
-from get_data import args_yaml
+from data.get_data import args_yaml
 
 def train_test_splits(config_name):
     config=args_yaml(config_name)
@@ -22,7 +22,7 @@ def train_test_splits(config_name):
 
     train.to_csv(train_path,header=True,sep=',',encoding='utf-8')
     test.to_csv(test_path,header=True,sep=',',encoding='utf-8')
-    print(train.head())
+   # print(train.head())
    # print(test.shape)
 
 if __name__=='__main__':
