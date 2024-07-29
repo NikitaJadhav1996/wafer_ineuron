@@ -20,10 +20,10 @@ def train_test_splits(config_name):
         random_state=random_state,
     )
 
-    train.to_csv(train_path,header=None,sep=',',encoding='utf-8')
-    test.to_csv(test_path,header=None,sep=',',encoding='utf-8')
-    print(train.shape)
-    print(test.shape)
+    train.to_csv(train_path,header=True,sep=',',encoding='utf-8')
+    test.to_csv(test_path,header=True,sep=',',encoding='utf-8')
+    print(train.head())
+   # print(test.shape)
 
 if __name__=='__main__':
     args=argparse.ArgumentParser()

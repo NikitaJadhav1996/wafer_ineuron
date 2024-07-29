@@ -21,10 +21,10 @@ estimators:
      #  l1_ratio: 0.89
       alpha: 0.859
       l1_ratio: 0.44
-model_dir: saved_models
+model_dir: models
 
 reports:
-  params: report/params.json
-  scores: report/scores.json
+  params: params.json
+  scores: scores.json
 
 webapp_model_dir: prediction_service/model/model.joblib
